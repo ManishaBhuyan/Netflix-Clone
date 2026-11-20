@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-left">
+      <div class="logo">NETFLIX</div>
+      <nav class="nav-links">
+        <a href="#" class="active" data-filter="all">Home</a>
+        <a href="#" data-filter="trending">Trending</a>
+        <a href="#" data-filter="scifi">Sci-Fi & Tech</a>
+        <a href="#" data-filter="drama">Drama</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <input type="text" id="searchInput" class="search-box" placeholder="Search titles..." />
+      <div class="avatar">M</div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge">FEATURED ORIGINAL</span>
+      <h1 id="heroTitle">Neural Horizon</h1>
+      <p id="heroDesc">
+        In a near-future metropolis governed by predictive algorithms, a young systems engineer uncovers an anomaly that challenges the boundary between human intuition and machine intelligence.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn btn-play" id="heroPlayBtn">&#9654; Play</button>
+        <button class="btn btn-info" id="heroInfoBtn">&#9432; More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie Rows Container -->
+  <main class="catalog" id="catalog">
+    <!-- Populated dynamically via script.js -->
+  </main>
+
+  <!-- Preview Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-banner" id="modalBanner"></div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span class="match-score" id="modalMatch">98% Match</span>
+          <span id="modalYear">2026</span>
+          <span class="maturity" id="modalRating">UA 13+</span>
+          <span id="modalCategory">Sci-Fi</span>
+        </div>
+        <h2 id="modalTitle">Title</h2>
+        <p id="modalDesc">Description goes here.</p>
+        <div class="modal-actions">
+          <button class="btn btn-play" id="modalWatchBtn">&#9654; Watch Preview</button>
+          <button class="btn btn-info" id="modalListBtn">+ My List</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Netflix UI Clone &mdash; Built with HTML, CSS &amp; Vanilla JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
